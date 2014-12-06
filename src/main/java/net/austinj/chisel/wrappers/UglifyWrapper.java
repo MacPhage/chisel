@@ -28,17 +28,20 @@ public class UglifyWrapper
 	{
 		try
 		{
-			UGLIFY_LIB = SimpleIO.readURL(libUrl);
+			System.out.print("Loading UglifyJS2... ");
+			UGLIFY_LIB = SimpleIO.readJarResource(UGLIFY_PATH);
+			System.out.println("DONE.");
 		}
 		catch(Exception e)
 		{
+			System.out.println("FAILED.");
 			e.printStackTrace();
 		}
 	}
 	
 	public static String uglifyString(String code, String args) throws Exception
 	{
-		engine.eval(new FileReader(UGLIFY_PATH));
+		engine.eval(UGLIFY_LIB);
 		Invocable inv = (Invocable) engine;
     	Object result = inv.invokeFunction(UGLIFY_FUNCTION,code,args);
     	return (String) result;

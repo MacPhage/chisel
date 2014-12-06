@@ -3,12 +3,18 @@ package net.austinj.chisel.io;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+
+import org.lesscss.deps.org.apache.commons.io.IOUtils;
+
+import net.austinj.chisel.Chisel;
 
 //Thanks http://goo.gl/0esLdm
 
@@ -57,6 +63,18 @@ public class SimpleIO
             result += (inputLine+"\n");
         in.close();
         return result;
+	}
+	
+	public static String readJarResource(String path) throws IOException
+	{
+		String currentLine = "";
+		String result = "";
+		BufferedReader reader = new BufferedReader(new InputStreamReader(Chisel.class.getClass().getResourceAsStream(path)));
+		while((currentLine = reader.readLine()) != null)
+		{
+			result += currentLine;
+		}
+		return result;
 	}
 	
 }

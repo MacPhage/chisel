@@ -14,8 +14,8 @@ public class Chisel
 	
     public static void main(String[] args)
     {
+    	System.out.println("Starting Chisel...");
     	UglifyWrapper.init();
-    	System.out.println(UglifyWrapper.UGLIFY_LIB);
     	try
     	{
     		if(args[0].equals("compile"))
@@ -36,7 +36,8 @@ public class Chisel
     			{
     				if(args[2].equals("-i") && args[4].equals("-o"))
     				{
-    					UglifyWrapper.uglifyFile(args[3],args[5]);
+    					String code = SimpleIO.readFile(args[3]);
+    					SimpleIO.writeFile(UglifyWrapper.uglifyString(code), args[5]);
     				}
     			}
     		}

@@ -1,11 +1,3 @@
-
-/*
-
-Thanks to Skalman, his code finally got this to work!
-https://github.com/Skalman/UglifyJS-online
-
-*/
-
 load("js/uglify/lib/utils.js");
 load("js/uglify/lib/ast.js");
 load("js/uglify/lib/parse.js");

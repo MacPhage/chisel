@@ -1,4 +1,4 @@
-package net.austinj.helloworld.HelloWorld;
+package net.austinj.chisel;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

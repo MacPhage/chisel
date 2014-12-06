@@ -1,4 +1,4 @@
-package net.austinj.helloworld.HelloWorld;
+package net.austinj.chisel;
 
 import org.lesscss.LessCompiler;
 import org.lesscss.LessException;

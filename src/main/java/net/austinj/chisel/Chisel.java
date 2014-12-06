@@ -1,30 +1,14 @@
 package net.austinj.chisel;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
 import net.austinj.chisel.io.SimpleIO;
 import net.austinj.chisel.wrappers.UglifyWrapper;
 import org.lesscss.LessCompiler;
 
 import java.io.File;
 
-public class Chisel extends Application {
-
-    private static String[] args;
+public class Chisel {
 
     public static void main(String[] args) {
-        Chisel.args = args;
-        launch(args);
-    }
-
-
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        initialize();
-    }
-
-
-    public void initialize() throws Exception {
         System.out.println("Starting Chisel...");
         UglifyWrapper.init();
         try {
@@ -74,4 +58,5 @@ public class Chisel extends Application {
             e.printStackTrace();
         }
     }
+
 }

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: C:\Program Files\Java\jre1.8.0_25\bin
+Main-Class: net.austinj.chisel.Chisel
+

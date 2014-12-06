@@ -17,21 +17,34 @@ function uglify(code, options) {
 	compress_options = defaults(compress_options, default_options.compress, true);
 	output_options = defaults(output_options, default_options.output, true);
 
+	var tab = "        ";
+	print(tab+"Parsing...");
+
 	// 1. Parse
 	var toplevel_ast = parse(code, parse_options);
 	toplevel_ast.figure_out_scope();
 
+	print(tab+"DONE.\n");
+	print(tab+"Compressing...");
+
 	// 2. Compress
 	var compressor = new Compressor(compress_options);
 	var compressed_ast = toplevel_ast.transform(compressor);
+
+	print(tab+"DONE.\n");
+	print(tab+"Mangling...");
 
 	// 3. Mangle
 	compressed_ast.figure_out_scope();
 	compressed_ast.compute_char_frequency();
 	compressed_ast.mangle_names();
 
+	print(tab+"DONE.\n");
+	print(tab+"Generating output...");
+
 	// 4. Generate output
 	code = compressed_ast.print_to_string(output_options);
+	print(tab+"DONE.\n");
 
 	return code;
 }

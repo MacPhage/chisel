@@ -16,7 +16,7 @@ public class UglifyWrapper
 	
 	final public static ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
 	final public static String ERROR = "c1159dbab86936e561f39a5a0f67b050";
-	public static String UGLIFY_PATH = "/js/uglify/uglifyjs-2.4.15-nashorn.js";
+	public static String UGLIFY_PATH = "js/uglify/uglifyjs-2.4.15-nashorn.js";
 	public static String UGLIFY_FUNCTION = "uglify";
 	public static String DEFAULT_SUFFIX = ".min.js";
 	public static String DEFAULT_ARGS = "{}";
@@ -29,7 +29,7 @@ public class UglifyWrapper
 		try
 		{
 			System.out.print("Loading UglifyJS2... ");
-			UGLIFY_LIB = SimpleIO.readJarResource(UGLIFY_PATH);
+			UGLIFY_LIB = SimpleIO.readFile(UGLIFY_PATH);
 			System.out.println("DONE.");
 		}
 		catch(Exception e)

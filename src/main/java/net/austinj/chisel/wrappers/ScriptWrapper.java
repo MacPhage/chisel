@@ -1,4 +1,4 @@
-package net.austinj.chisel;
+package net.austinj.chisel.wrappers;
 
 import java.io.FileReader;
 import java.time.LocalDateTime;
@@ -16,14 +16,14 @@ public class ScriptWrapper
     	try
     	{
     		
-    		//String s = SimpleIO.readFile("js/uglifyjs-2.4.15.js");
+    		String s = SimpleIO.readFile("js/alfeo.js");
     	
 	    	ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
 	    	engine.eval(new FileReader("js/uglify/magic.js"));
 	        
 	    	Invocable inv = (Invocable) engine;
 	    	
-	    	Object result = inv.invokeFunction("uglify","var a = 5; var b = 5;","{}");
+	    	Object result = inv.invokeFunction("uglify",s,"{}");
 	    	System.out.println(result);
 	    	//System.out.println(result.getClass());
 	    	

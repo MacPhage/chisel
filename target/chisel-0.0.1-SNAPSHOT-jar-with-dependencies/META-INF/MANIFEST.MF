@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Archiver-Version: Plexus Archiver
-Created-By: Apache Maven
-Built-By: austinj
-Build-Jdk: 1.6.0_65
-Main-Class: net.austinj.chisel.Chisel
-Trusted-Library: true
-

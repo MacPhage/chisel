@@ -1,4 +1,0 @@
-Use:
-	compile less -i input.less -o output.css
-	compile uglify -i input.js -o output.js
-	compile uglify -i input.css -o output.css

@@ -1,6 +1,7 @@
 package net.austinj.chisel.wrappers;
 
 import java.io.FileReader;
+import java.io.InputStream;
 import java.net.URL;
 
 import javax.script.ScriptEngine;
@@ -23,7 +24,7 @@ public class UglifyWrapper
 	public static String DEFAULT_ARGS = "{}";
 	public static String UGLIFY_LIB = "unset";
 	//String url = Chisel.class.getResource("/html/index.html").toExternalForm();
-	private static String libUrl = Chisel.class.getResource(UGLIFY_PATH).toExternalForm();
+	private static InputStream libUrl = Chisel.class.getResourceAsStream(UGLIFY_PATH);
 	
 	
 	public static void init()
@@ -31,7 +32,7 @@ public class UglifyWrapper
 		try
 		{
 			System.out.print("Loading UglifyJS2... ");
-			UGLIFY_LIB = SimpleIO.readFile(libUrl);
+			UGLIFY_LIB = SimpleIO.readFile(UGLIFY_PATH);
 			System.out.println("DONE.");
 		}
 		catch(Exception e)

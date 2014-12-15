@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World!</title>
+
+    <style>
+
+    .button {
+        width: 1.5em;
+        height: 1.5em;
+        color: rgb(240,240,240);
+        background: rgb(198, 49, 49);
+        -webkit-border-radius: 0.75em;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        text-align: center;
+        font-family: "Menlo", monospace;
+    }
+
+    </style>
+
+</head>
+<body>
+    <h1>Hello World!</h1>
+    We are using node.js <script>document.write(process.version)</script>.
+    <span style="font-family: 'Helvetica Neue'; font-size: 2em; font-weight: 300;">with node-webkit!</span>
+
+
+    <div class="button" onclick="javascript:process.exit(0);"> <!-- This onclick attribute runs NodeJS code! :D -->
+        X
+    </div>
+
+
+</body>
+</html>

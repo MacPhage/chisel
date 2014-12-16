@@ -1,8 +1,11 @@
 {
-    "name":"nw-demo2",
+    "name":"chisel",
     "main":"index.html",
     "window": {
-        "frame":false,
-        "toolbar":false
+        "width":375,
+        "height":667,
+        "frame":true,
+        "toolbar":false,
+        "resizable":false
     }
 }

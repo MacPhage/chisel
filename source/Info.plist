@@ -46,11 +46,11 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>node-webkit</string>
+	<string>Chisel</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>38.0.2125.104</string>
+	<string>v0.0.1</string>
 	<key>CFBundleVersion</key>
 	<string>2125.104</string>
 	<key>DTSDKBuild</key>

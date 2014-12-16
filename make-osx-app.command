@@ -22,6 +22,6 @@ cd ..
 cp Info.plist ../bin/$nodewebkitversion/node-webkit.app/Contents/
 
 cd ..
-# `setfileicon` is an OS X application for
-setfileicon node-webkit.app/Contents/Resources/nw.icns node-webkit.app/
+# `setfileicon` is an OS X application for setting the icon of files and folders
+setfileicon bin/$nodewebkitversion/node-webkit.app/Contents/Resources/nw.icns bin/$nodewebkitversion/node-webkit.app
 

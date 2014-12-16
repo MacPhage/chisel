@@ -8,6 +8,8 @@ echo "cd-ing to $here"
 cd "$here" || exit 1
 cd ./source/icons/
 
+cp $iconfile ../app.nw/icon/$iconfile
+
 mkdir $iconsetname
 sips -z 16 16     $iconfile --out nw.iconset/icon_16x16.png
 sips -z 32 32     $iconfile --out nw.iconset/icon_16x16@2x.png

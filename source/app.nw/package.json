@@ -2,6 +2,7 @@
     "name":"chisel",
     "main":"index.html",
     "window": {
+        "title":"Chisel SNAPSHOT",
         "width":375,
         "height":667,
         "frame":true,

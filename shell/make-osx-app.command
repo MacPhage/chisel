@@ -35,5 +35,7 @@ echo "Done."
 echo "Setting icon..."
 cd ..
 # `setfileicon` is an OS X application for setting the icon of files and folders
-setfileicon "bin/$nodewebkitversion/node-webkit.app/Contents/Resources/nw.icns" "bin/$nodewebkitversion/node-webkit.app"
+# It is not built-in and can be found here:
+# https://github.com/MacPhage/binaries/tree/master/bin/OSX/setfileicon
+setfileicon "bin/dist/$nodewebkitversion/node-webkit.app/Contents/Resources/nw.icns" "bin/dist/$nodewebkitversion/node-webkit.app"
 echo "Done."

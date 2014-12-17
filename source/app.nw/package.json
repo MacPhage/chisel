@@ -1,12 +1,22 @@
 {
-    "name":"chisel",
-    "main":"index.html",
+    "node-main":"main.js",
+    "main": "index.html",
+    "name": "Chisel",
+    "description": "A web developer's best friend. http://austinj.net/chisel",
+    "version": "0.0.1",
     "window": {
-        "title":"Chisel SNAPSHOT",
+        "title": "Chisel SNAPSHOT",
+        "icon": "icon/Icon1024.png",
+        "toolbar": false,
+        "frame": true,
+        "resizable":false,
         "width":375,
         "height":667,
-        "frame":true,
-        "toolbar":false,
-        "resizable":false
+        "position": "mouse"
+    },
+    "webkit": {
+        "plugin": true,
+        "java": false,
+        "page-cache":false
     }
 }

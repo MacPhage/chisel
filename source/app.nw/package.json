@@ -1,22 +1,54 @@
 {
-    "node-main":"main.js",
-    "main": "index.html",
     "name": "Chisel",
     "description": "A web developer's best friend. http://austinj.net/chisel",
     "version": "0.0.1",
+    "author": "Austin Jackson <theaustinjackson@gmail.com>",
+    "contributors": [
+        {
+            "name": "Austin Jackson",
+            "email": "theaustinjackson@gmail.com"
+        },
+        {
+            "name": "Tarun Boddupalli",
+            "email": "tarunbgamer@gmail.com"
+        }
+    ],
+    "node-main": "main.js",
+    "main": "index.html",
     "window": {
         "title": "Chisel SNAPSHOT",
         "icon": "icon/Icon1024.png",
         "toolbar": false,
         "frame": true,
-        "resizable":false,
-        "width":375,
-        "height":667,
+        "resizable": false,
+        "width": 375,
+        "height": 667,
         "position": "mouse"
     },
     "webkit": {
         "plugin": true,
         "java": false,
-        "page-cache":false
+        "page-cache": false
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:MacPhage/chisel.git"
+    },
+    "bugs": {
+        "url": "https://github.com/MacPhage/chisel/issues"
+    },
+    "keywords": [
+        "chisel"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "evil-icons": ">= 1.2.0",
+        "animate.css": ">= 3.1.1",
+        "wow": "matthieua/WOW",
+        "less":"2.1.x",
+        "colors":"1.0.x"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.5"
     }
 }

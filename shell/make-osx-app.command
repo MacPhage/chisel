@@ -8,20 +8,32 @@ nodewebkitversion="node-webkit-v0.11.2-osx-x64"
 here="`dirname \"$0\"`"
 echo "cd-ing to $here"
 cd "$here" || exit 1
+cd ..
+
+echo "Building app to ./build/app.nw ..."
 
 cd ./source/app.nw/
 zip -r -X app.nw *
 cp app.nw ../../build/
-cp app.nw ../../bin/$nodewebkitversion/node-webkit.app/Contents/Resources/
+echo "Done."
+echo "Copying build to Mac app..."
+cp app.nw ../../bin/dist/$nodewebkitversion/node-webkit.app/Contents/Resources/
 rm app.nw
+echo "Done."
 
+
+echo "Mounting icon..."
 cd ../icons/
-cp nw.icns ../../bin/$nodewebkitversion/node-webkit.app/Contents/Resources/
+cp nw.icns ../../bin/dist/$nodewebkitversion/node-webkit.app/Contents/Resources/
+echo "Done."
 
+echo "Mounting Info.plist..."
 cd ..
-cp Info.plist ../bin/$nodewebkitversion/node-webkit.app/Contents/
+cp Info.plist ../bin/dist/$nodewebkitversion/node-webkit.app/Contents/
+echo "Done."
 
+echo "Setting icon..."
 cd ..
 # `setfileicon` is an OS X application for setting the icon of files and folders
 setfileicon "bin/$nodewebkitversion/node-webkit.app/Contents/Resources/nw.icns" "bin/$nodewebkitversion/node-webkit.app"
-
+echo "Done."

@@ -1,0 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+* {
+  font-family: Roboto;
+}
+
+#logo img {
+  width: 256px;
+  height: 256px;
+}
+
+#logo {
+  width: 256px;
+  height: 256px;
+  margin: auto;
+}
+
+.content-header {
+  margin-top: 50px;
+  background: rgba(0,0,255,0.5);
+}

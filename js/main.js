@@ -1,10 +1,8 @@
-new WOW().init();
-
-var resources = {
+/*var resources = {
 	colors: {
 		randomHex: function() {
 			var hex = '#';
-			var colorOptions = [0,1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f"];
+			var colorOptions = [1,2,3,"a","b","c","d","e","f"];
       for (var i = 0; i < 6; i++) {
         hex += colorOptions[Math.floor(Math.random() * 6)];
       }
@@ -28,6 +26,15 @@ resources.bg = {
 		return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,document.body.offsetHeight, document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight);
 	},
 	setBgImage: function() {
-        document.body.style.backgroundImage = this.pattern.generate(document.body.clientWidth + 100, this.height() + 100).dataUrl;
+    document.body.style.backgroundImage = this.pattern.generate(document.body.clientWidth + 100, this.height() + 100).dataUrl;
 	}
-}
+}*/
+
+$(document).ready(function() {
+	window.scroll(0, 0);
+	new WOW().init();
+	setTimeout(function() {
+		$(".fade-in").animate({opacity: 1});	
+		$("body").css({"overflow": "scroll"});
+	}, 1500);
+});

@@ -3,7 +3,8 @@
 
     <title>Chisel</title>
 
-    <link href="./css/core.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <link href="./css/index.css" rel="stylesheet">
     <link href="./node_modules/animate.css/animate.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,22 +21,24 @@
 
 </head>
 <body>
-    <div class="container no-select">
+    <div class="main-container no-select">
         <div id="releasewarning"></div>
-        <div class="box header wow fadeInUp" data-wow-delay="0.25s">
+        <div class="box header wow fadeInUp invisible" data-wow-delay="0.25s">
             <h2>Chisel<br><small>A web developer's best friend</small></h2>
         </div>
-        <div class="box otherthing wow fadeInUp" data-wow-delay="0.5s">
+        <div class="box otherthing wow fadeInUp invisible" data-wow-delay="0.5s">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent erat lacus, congue eget massa et, consequat luctus neque. Quisque at maximus quam, in malesuada tellus.
         </div>
-        <div class="box varrick wow fadeInUp" data-wow-delay="0.75s">
-            Look at me!
+        <div class="box varrick wow fadeInUp invisible" data-wow-delay="0.75s">
+            <a href="./main.html">Look at me!</a>
             <input id="filething" type="file" />
         </div>
     </div>
 
     <script>
-    //
+        $(window).load(function () {
+            $("*").removeClass("invisible");
+        });
     </script>
 
 </body>

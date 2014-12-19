@@ -1,3 +1,9 @@
+
+@native-font: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+@healthy-white: rgb(240,240,240);
+@healthy-black: rgb(25, 25, 25);
+@spacegrey: rgb(40, 40, 40);
+
 * {
     overflow: hidden;
     .no-select;
@@ -9,9 +15,10 @@ body {
     margin: 0px!important;
     padding: 0px!important;
     overflow: hidden;
+    font-family: @native-font;
 }
 
-.container {
+.main-container {
     max-width: 375px!important;
     height: 667px!important;
     margin: 0px!important;
@@ -23,35 +30,28 @@ body {
 .no-select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .selectable {
     -webkit-touch-callout: all;
     -webkit-user-select: all;
-    -khtml-user-select: all;
-    -moz-user-select: all;
-    -ms-user-select: all;
-    user-select: all;
 }
 .selectable-text {
     -webkit-touch-callout: text;
     -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
 }
 .selectable-element {
     -webkit-touch-callout: element;
     -webkit-user-select: element;
-    -khtml-user-select: element;
-    -moz-user-select: element;
-    -ms-user-select: element;
-    user-select: element;
+}
+.text-shadow {
+    text-shadow: 1px 1px 2px rgb(40, 40, 40);
+}
+.invisible {
+    visibility: hidden!important;
+}
+.hidden {
+    display: none!important;
 }
 
 #releasewarning {

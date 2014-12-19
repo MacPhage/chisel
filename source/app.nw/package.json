@@ -48,7 +48,8 @@
         "less":"2.1.x",
         "colors":"1.0.x",
         "jquery":"2.1.x",
-        "bootstrap":"3.3.x"
+        "bootstrap":"3.3.x",
+        "octicons":"github/octicons"
     },
     "devDependencies": {
         "grunt": "^0.4.5"

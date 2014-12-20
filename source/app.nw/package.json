@@ -13,7 +13,7 @@
             "email": "tarunbgamer@gmail.com"
         }
     ],
-    "node-main": "main.js",
+    "node-main": "entrypoint.js",
     "main": "index.html",
     "window": {
         "title": "Chisel SNAPSHOT",

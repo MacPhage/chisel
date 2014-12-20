@@ -1,0 +1,70 @@
+
+@import "fonts.less";
+
+@native-font: "Helvetica Neue", "Segoe UI", "Ubuntu", sans-serif;
+@healthy-white: rgb(240, 240, 240);
+@healthy-black: rgb(25, 25, 25);
+@spacegrey: rgb(40, 40, 40);
+@healthy-grey: rgb(100, 100, 100);
+@healthy-silver: rgb(175, 175, 175);
+
+* {
+    overflow: hidden;
+    .no-select;
+}
+
+body {
+    width: 375px!important;
+    height: 667px!important;
+    margin: 0px!important;
+    padding: 0px!important;
+    overflow: hidden;
+    font-family: @native-font;
+}
+
+.main-container {
+    max-width: 375px!important;
+    height: 667px!important;
+    margin: 0px!important;
+    padding: 0px!important;
+    overflow: hidden!important;
+    background: rgb(250, 250, 250);
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+.selectable {
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+}
+.selectable-text {
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+}
+.selectable-element {
+    -webkit-touch-callout: element;
+    -webkit-user-select: element;
+}
+.text-shadow {
+    text-shadow: 1px 1px 2px rgb(40, 40, 40);
+}
+.invisible {
+    visibility: hidden!important;
+}
+.hidden {
+    display: none!important;
+}
+
+#releasewarning {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    opacity: 0.7;
+    background: url("../img/ribbon/pre-alpha.png");
+}

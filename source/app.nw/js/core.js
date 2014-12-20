@@ -3,8 +3,16 @@
 var gui = require("nw.gui");
 var win = gui.Window.get();
 
-// win.on("minimize",function(){
-//     console.log("Window is minimized!");
-// });
+var option = {
+    key: "Ctrl+D",
+    active: function(){
+        require('nw.gui').Window.get().showDevTools();
+    },
+    failed: function(msg){
+        console.log(msg);
+    }
+};
 
-win.resizeTo(375,667);
+var shortcut = new gui.Shortcut(option);
+
+gui.App.registerGlobalHotKey(shortcut);

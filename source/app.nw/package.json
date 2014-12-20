@@ -13,7 +13,7 @@
             "email": "tarunbgamer@gmail.com"
         }
     ],
-    "node-main": "main.js",
+    "node-main": "entrypoint.js",
     "main": "index.html",
     "window": {
         "title": "Chisel SNAPSHOT",
@@ -46,7 +46,10 @@
         "animate.css": ">= 3.1.1",
         "wow": "matthieua/WOW",
         "less":"2.1.x",
-        "colors":"1.0.x"
+        "colors":"1.0.x",
+        "jquery":"2.1.x",
+        "bootstrap":"3.3.x",
+        "octicons":"github/octicons"
     },
     "devDependencies": {
         "grunt": "^0.4.5"

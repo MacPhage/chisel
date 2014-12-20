@@ -1,0 +1,10 @@
+{
+    "actions": [
+        {
+            "action":"testAction",
+            "actionData":{
+                "text":"Hello, World!"
+            }
+        }
+    ]
+}

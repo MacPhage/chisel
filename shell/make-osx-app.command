@@ -10,20 +10,15 @@ echo "cd-ing to $here"
 cd "$here" || exit 1
 cd ..
 
-echo "Building app to ./build/app.nw ..."
-
-cd ./source/app.nw/
-zip -r -X app.nw *
-cp app.nw ../../build/
-echo "Done."
+./shell/build-app.command
+cd build
 echo "Copying build to Mac app..."
-cp app.nw ../../bin/dist/$nodewebkitversion/node-webkit.app/Contents/Resources/
-rm app.nw
+cp app.nw ../bin/dist/$nodewebkitversion/node-webkit.app/Contents/Resources/
 echo "Done."
 
-
+../shell/create-osx-icons.command
 echo "Mounting icon..."
-cd ../icons/
+cd ../source/icons/
 cp nw.icns ../../bin/dist/$nodewebkitversion/node-webkit.app/Contents/Resources/
 echo "Done."
 

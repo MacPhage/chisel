@@ -1,8 +1,9 @@
 Todo list of things to do
 ====
 
-- ~~Get OS X icon to work~~
-- ~~Keep window from resizing~~
-- ~~Make window draggable~~
-- ~~Start implementing basic UI system (similar to iOS)~~
-- Implement chisel.json Actions without the interface
+- [X] Get OS X icon to work
+- [X] Keep window from resizing
+- [X] Make window draggable
+- [X] Start implementing basic UI system (similar to iOS)
+- [X] Figure out IO system
+- [ ] Implement chisel.json Actions without the interface

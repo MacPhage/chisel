@@ -5,7 +5,7 @@
 
 #The name of the folder in the ./bin/
 nodewebkitversion="node-webkit-v0.11.2-osx-x64"
-nodewebkitpath="./bin/dist/$nodewebkitversion/node-webkit.app/Contents/MacOS/"
+nodewebkitpath="./bin/$nodewebkitversion/node-webkit.app/Contents/MacOS/"
 apppath="./build/app.nw"
 here="`dirname \"$0\"`"
 echo "cd-ing to $here"
@@ -16,4 +16,4 @@ echo "[Shell] Starting node-webkit ($nodewebkitversion)..."
 echo "[Shell] node-webkit path: $nodewebkitpath"
 echo "[Shell] app.nw path: $apppath"
 
-$nodewebkitpath/node-webkit ~/Desktop/test.txt
+$nodewebkitpath/node-webkit $apppath

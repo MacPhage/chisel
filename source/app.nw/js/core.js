@@ -27,17 +27,27 @@ var option = {
 var shortcut = new gui.Shortcut(option);
 gui.App.registerGlobalHotKey(shortcut);
 
-//alert(__dirname);
-alert(execPath);
-//alert(__filename);
 
-// var chiselFile = fs.readFile("~/sandbox/chisel/test-files/chisel.json","utf8", function(err,data){
-//     if(err){
-//         return console.log(err);
-//     }
-// });
-//
-// alert(chiselFile);
-// var chisel = JSON.parse(chiselFile.toString());
-//
-// alert(chisel);
+//Generates commandline arguments as a String
+var args = "";
+gui.App.argv.forEach(function(val, index, array) {
+    args += (index + ': ' + val)+"\n";
+});
+alert(args);
+
+//Reads the file given in the commandline arguments
+var file;
+try {
+    file = fs.readFileSync(String(gui.App.argv[0]),"utf8");
+
+}
+catch(err){
+    alert(err);
+}
+alert(file);
+
+//chisel.json parsed and applied to the 'chisel' variable
+var chisel = JSON.parse(String(file));
+
+alert("Ready to do the thing!");
+//Ready for actioning B-)

@@ -3,7 +3,6 @@
 //Temporary: load all renditions of Roboto; we'll trim the unused ones later
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,100italic,300italic,400italic,500italic,700,700italic,900,900italic);
 
-@import "anim.less";
 @import "mixins.less";
 
 
@@ -30,42 +29,118 @@ body {
         margin-right: auto;
 
 
-        .hero {
+        .header {
             text-align: center;
             background: @transparent;
-            margin: 0;
+            margin-top: 0;
+            margin-bottom: 10px;
+            margin-left: 0;
+            margin-right: 0;
 
-            .icon {
-                img {
-                    width: 256px;
-                    height: 256px;
+            .hero {
+
+                display: table;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+
+                .wrap {
+
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    .icon {
+                        display: inline-block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 256px;
+                        height: 256px;
+                        background: url("../res/img/Icon256.png");
+                    }
+
+                    .text {
+                        display: inline-block;
+                        .title {
+                            font-family: "Roboto", @native-font;
+                            font-weight: 100;
+                            font-size: 3.75em;
+                            margin-bottom: 0;
+                        }
+                        .caption {
+                            font-family: "Roboto", @native-font;
+                            font-weight: 300;
+                            font-size: 1.5em;
+                            margin-top: 0;
+                        }
+                    }
+
                 }
+
             }
 
-            .title {
-                font-family: "Roboto", @native-font;
-                font-weight: 100;
-                font-size: 3.75em;
-                margin-bottom: 0;
-            }
-            .caption {
-                font-family: "Roboto", @native-font;
-                font-weight: 300;
-                font-size: 1.5em;
-                margin-top: 0;
+            .external {
+
+                margin-top: 10px;
+                margin-bottom: 20px;
+
             }
 
         }
-        
+
         .content {
-            
             padding-top: 20px;
             
+            //Everything in "content" is parsed Markdown, so things will only be in standard HTML elements
+
+            * {
+                font-family: "Roboto", @native-font;
+                font-size: 1.1em;
+            }
+
+            h1 {
+            }
+            h2 {
+            }
+            h3 {
+            }
+            h4 {
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                font-size: 1.5em;
+            }
+
         }
 
 
     }
 
+}
+
+
+/* Large desktops and anything larger */
+@media(min-width:1200px){
+    //
+}
+
+/* Portrait tablets and medium desktops */
+@media(min-width:992px)and(max-width:1199px){
+    //
+}
+
+/* Portrait tablets and small desktops */
+@media(min-width:768px)and(max-width:991px){
+    //
+}
+
+/* Landscape phones and portrait tablets */
+@media(max-width:767px){
+    //
+}
+
+/* Portrait phones and smaller */
+@media(max-width:480px){
+    .hero{display: block!important;.wrap{display: block!important}} //This makes the elements in the .header stack vertically, instead of horizontally, because there's less room on-screen
 }
 
 

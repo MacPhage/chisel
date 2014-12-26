@@ -6,5 +6,5 @@ A web developers best friend that uses [node-webkit](https://github.com/rogerwan
 [//]: # (WEB_CONTENT_START)
 
 
-##What is Chisel?
+####What is Chisel?
 Chisel is a cross-platform desktop app for easy automation of common things that web developers do.

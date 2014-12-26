@@ -31,21 +31,22 @@ resources.bg = {
 }*/
 
 var clicks = 0;
+var readMeText;
 
 $(document).ready(function() {
-	window.scroll(0, 0);
-	new WOW().init();
-	setTimeout(function() {
-		$(".fade-in").animate({opacity: 1});
-		$("body").css({"overflow": "scroll"});
-	}, 1500);
-	setTimeout(function() {
-		$(".content-main").fadeIn();
-	}, 2000);
-	$("#logo img").click(function() {
-		clicks++;
-		if (clicks === 7) {
-			window.location.href = "http://doge2048.com";
-		}
-	});
+    window.scroll(0, 0);
+    new WOW().init();
+    setTimeout(function() {
+        $(".fade-in").animate({opacity: 1});
+        $("body").css({"overflow": "scroll"});
+    }, 1500);
+    setTimeout(function() {
+        $(".content-main").fadeIn();
+    }, 2000);
+    $("#logo img").click(function() {
+        clicks++;
+        if (clicks === 7) {
+            window.location.href = "http://doge2048.com";
+        }
+    });
 });

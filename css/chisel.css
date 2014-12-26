@@ -91,3 +91,6 @@ body .main-container .hero .caption {
   font-size: 1.5em;
   margin-top: 0;
 }
+body .main-container .content {
+  padding-top: 20px;
+}

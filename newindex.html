@@ -12,11 +12,12 @@
         <script src="js/wow.min.js"></script>
         <script src="js/trianglify.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/marked.js"></script>
     </head>
     <body>
-        
+
         <div id="releasewarning"></div>
-        
+
         <div class="main-container">
 
             <div class="hero jumbotron">
@@ -31,11 +32,18 @@
                 </p>
 
             </div>
-            <div class="content">
-                <div class="bar"></div>
-                <h1>Great... What do I do with it?</h1>
-                <h2>TL;DR? It'll make your life easier.</h2>
-                <div class="row">
+
+            <div class="bar"></div>
+
+            <div id="readmetarget" class="content">
+                <!--
+<h1>Great... What do I do with it?</h1>
+<h2>TL;DR? It'll make your life easier.</h2>
+-->
+
+
+
+                <div style="display: none;" class="row">
                     <div class="col-lg-6 col-lg-offset-3">
                         <p>
                             INSERT CONTENT HERE <br>
@@ -50,5 +58,24 @@
             </div>
 
         </div>
+
+        <script>
+
+            var siteContent = document.getElementById("readmetarget");
+            //Where the desired webcontent starts in the README.md
+            var mdSep = "[//]: # (WEB_CONTENT_START)"; 
+            
+            $.ajax({
+                url : "http://github.com/MacPhage/chisel/raw/gh-pages/README.md",
+                success : function(result)
+                {
+                    console.log("Ajax successfully retrieved README.md.");
+                    readMeText = result;
+                    siteContent.innerHTML = marked(readMeText.substring(readMeText.indexOf(mdSep)));
+                }
+            });
+
+        </script>
+
     </body>
 </html>

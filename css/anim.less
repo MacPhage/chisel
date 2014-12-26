@@ -1,0 +1,41 @@
+@-webkit-keyframes flipIn {
+    0%, 20% {
+        -webkit-transform: rotateX(90deg);
+    }
+    30% {
+        -webkit-transform: rotateX(20deg);
+    }
+    40% {
+        -webkit-transform: rotateX(-20deg);
+    }
+    50%, 100% {
+        -webkit-transform: rotateX(0deg);
+    }
+}
+
+@keyframes flipIn2 {
+    0%, 20% {
+        transform: rotateX(90deg);
+    }
+    30% {
+        transform: rotateX(20deg);
+    }
+    40% {
+        transform: rotateX(-20deg);
+    }
+    50%, 100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.flipIn {
+    -webkit-animation-name: flipIn;
+    animation-name: flipIn;
+}

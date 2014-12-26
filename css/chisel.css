@@ -97,6 +97,14 @@ body .main-container .header .external {
   margin-bottom: 20px;
   font-size: 1.5em;
 }
+body .main-container .fromthereadme {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: "Roboto", "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 1.0em;
+  text-align: center;
+}
 body .main-container .content {
   padding-top: 20px;
 }
@@ -127,5 +135,10 @@ body .main-container .content h4 {
   }
   .external .ch-button {
     font-size: 0.56em!important;
+  }
+  #releasewarning {
+    width: 75px;
+    height: 75px;
+    background: url("../res/img/pre-alpha-75.png");
   }
 }

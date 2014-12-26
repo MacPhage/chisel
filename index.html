@@ -63,6 +63,10 @@
 
             <div class="bar"></div>
 
+            <div class="fromthereadme">
+                <a href="https://github.com/MacPhage/chisel/blob/master/README.md">From the README.md</a>
+            </div>
+            
             <div id="readmetarget" class="content">
 
                 <!-- Ajax grabs the README.md and embeds it here           -->
@@ -91,12 +95,14 @@
             var mdSep = "[//]: # (WEB_CONTENT_START)"; 
 
             $.ajax({
-                url : "README.md",
-                success : function(result)
-                {
+                url: "README.md",
+                success: function(result){
                     console.log("Ajax successfully retrieved README.md.");
                     readMeText = result;
                     siteContent.innerHTML = marked(readMeText.substring(readMeText.indexOf(mdSep)));
+                },
+                error: function(jqXHR,textStatus,errorThrown){
+                    siteContent.innerHTML = "Ajax failed to retrieve <a href=\"https://github.com/MacPhage/chisel/blob/master/README.md\">README.md</a>.<br>";
                 }
             });
             

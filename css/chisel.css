@@ -237,4 +237,7 @@ body .footer {
     height: 75px;
     background: url("../res/img/pre-alpha-75.png");
   }
+  p .signature {
+    font-size: 1.1em!important;
+  }
 }

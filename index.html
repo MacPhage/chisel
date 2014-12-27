@@ -90,7 +90,7 @@
 
         </div>
 
-        <div id="footer" class="footer">
+        <div id="footer" class="footer invisible">
             Website by Tarun Boddupalli and Austin Jackson &copy;
         </div>
         
@@ -108,9 +108,11 @@
                     readMeText = result;
                     siteContent.innerHTML = marked(readMeText.substring(readMeText.indexOf(mdSep)));
                     $("p").has(".signature").css("text-align", "right");
+                    $("#footer").removeClass("invisible");
                 },
                 error: function(jqXHR,textStatus,errorThrown){
                     siteContent.innerHTML = "Ajax failed to retrieve <a href=\"https://github.com/MacPhage/chisel/blob/master/README.md\">README.md</a>.<br>";
+                    $("#footer").removeClass("invisible");
                 }
             });
 

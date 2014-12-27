@@ -111,7 +111,7 @@ body {
                 margin-right: 10px;
                 margin-bottom: 20px;
             }
-            
+
             h1 {
                 font-weight: 700;
                 text-transform: uppercase;
@@ -161,7 +161,7 @@ body {
                 color: #f5f5f5;
                 border: 1px solid #ccc;
                 border-radius: 4px;
-                
+
                 code {
                     font-family: "Menlo", monospace;
                     line-height: 1.42857143;
@@ -183,39 +183,42 @@ body {
             p * {
                 font-size: 1.0em;
             }
-            
+
             p .signature {
                 font-family: "Nothing You Could Do", @native-font;
                 font-size: 1.5em;
-                
+
                 a img {
                     display: inline-block;
                 }
-                
+
             }
 
         }
 
 
     }
-    
-    
+
+
     .footer {
-        
+
         margin-bottom: 0;
         padding-top: 5px;
         padding-bottom: 5px;
-        
+
         width: 100%;
-        
+
         background: rgb(65, 65, 65);
-        //color: rgb(252, 245, 67);
-        
+        //color: rgb(255, 51, 51); Color is created by randomColor in index.html, or by the CSS animation below
+
         font-family: "Avenir", @native-font;
         font-weight: 400;
         text-align: center;
         font-size: 0.75em;
-        
+
+        -webkit-animation: rainbow 10s infinite;
+        animation: rainbow 10s infinite;
+
     }
 
 }

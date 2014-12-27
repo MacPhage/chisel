@@ -211,6 +211,8 @@ body .footer {
   font-weight: 400;
   text-align: center;
   font-size: 0.75em;
+  -webkit-animation: rainbow 10s infinite;
+  animation: rainbow 10s infinite;
 }
 /* Large desktops and anything larger */
 /* Portrait tablets and medium desktops */

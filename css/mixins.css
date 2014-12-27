@@ -22,7 +22,7 @@
   border-radius: 20px;
   background: linear-gradient(#ebebeb, #d2d2d2);
   -webkit-filter: drop-shadow(0px 1px 1px rgba(50, 50, 50, 0.85));
-  font-family: "Roboto", "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", "Segoe UI", "Franklin Gothic Medium", "Roboto", sans-serif;
   font-size: 1.0em;
 }
 .ch-button:hover,

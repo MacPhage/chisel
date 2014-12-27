@@ -14,6 +14,7 @@
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="js/wow.min.js"></script>
         <script src="js/trianglify.min.js"></script>
+        <script src="js/randomColor.js"></script>
         <script src="js/main.js"></script>
         <script src="js/marked.js"></script>
     </head>
@@ -67,7 +68,7 @@
             <div class="fromthereadme">
                 <a href="https://github.com/MacPhage/chisel/blob/gh-pages/README.md">From the README.md</a>
             </div>
-            
+
             <div id="readmetarget" class="content">
 
                 <!-- Ajax grabs the README.md and embeds it here           -->
@@ -89,6 +90,11 @@
 
         </div>
 
+        <div id="footer" class="footer">
+            Website by Tarun Boddupalli and Austin Jackson &copy;
+        </div>
+        
+        
         <script>
 
             var siteContent = document.getElementById("readmetarget");
@@ -101,13 +107,19 @@
                     console.log("Ajax successfully retrieved README.md.");
                     readMeText = result;
                     siteContent.innerHTML = marked(readMeText.substring(readMeText.indexOf(mdSep)));
+                    $("p").has(".signature").css("text-align", "right");
                 },
                 error: function(jqXHR,textStatus,errorThrown){
                     siteContent.innerHTML = "Ajax failed to retrieve <a href=\"https://github.com/MacPhage/chisel/blob/master/README.md\">README.md</a>.<br>";
                 }
             });
+
+            
+            var hue = randomColor({luminosity: "light"});
+            document.getElementById("footer").setAttribute("style","color: "+hue+"!important");
             
             //$(".invisible").removeClass("invisible");
+            
 
         </script>
 

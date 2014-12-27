@@ -2,6 +2,7 @@
 
 //Temporary: load all renditions of Roboto; we'll trim the unused ones later
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
 
 @import "mixins.less";
 
@@ -9,6 +10,7 @@ body {
 
     font-family: @native-font;
     background-color: rgb(224, 234, 244);
+    color: rgb(50,50,50);
     font-size: 12pt;
 
     .main-container {
@@ -77,7 +79,7 @@ body {
 
                 margin-top: 10px;
                 margin-bottom: 20px;
-                
+
                 font-size: 1.5em;
 
             }
@@ -92,10 +94,10 @@ body {
             font-size: 1.0em;
             text-align: center;
         }
-        
+
         .content {
             padding-top: 20px;
-            
+
             //Everything in "content" is parsed Markdown, so things will only be in standard HTML elements
 
             * {
@@ -103,11 +105,29 @@ body {
                 font-size: 1.1em;
             }
 
+            h1,h2,h3,h4,h5,p,ul,ol {
+                margin-top: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 20px;
+            }
+            
             h1 {
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 3em;
             }
             h2 {
+                font-weight: 700;
+                text-transform: normal;
+                font-size: 2em;
+                //color: rgb(183, 24, 24);
             }
             h3 {
+                font-weight: 700;
+                text-transform: normal;
+                font-size: 1.5em;
+                color: rgb(183, 24, 24);
             }
             h4 {
                 font-weight: 700;
@@ -115,10 +135,87 @@ body {
                 margin-bottom: 0;
                 font-size: 1.35em;
             }
+            h5 {
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                font-size: 1.15em;
+            }
+            p {
+                margin-bottom: 20px;
+
+            }
+            hr {
+                height: 1px;
+                background: rgb(95, 95, 95);
+                margin-left: 0;
+                margin-right: 0;
+            }
+            pre { 
+                padding: 9.5px;
+                margin: 0 0 10px;
+                font-size: 13px;
+                background-color: #333;
+                word-break: break-all;
+                word-wrap: break-word;
+                color: #f5f5f5;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                
+                code {
+                    font-family: "Menlo", monospace;
+                    line-height: 1.42857143;
+                }
+            }
+            p code {
+                font-family: "Menlo", monospace;
+                line-height: 1.42857143;
+                margin-left: 0;
+                margin-right: 0;
+                //font-size: 1.0em;
+            }
+            p img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 700px;
+            }
+            p * {
+                font-size: 1.0em;
+            }
+            
+            p .signature {
+                font-family: "Nothing You Could Do", @native-font;
+                font-size: 1.5em;
+                
+                a img {
+                    display: inline-block;
+                }
+                
+            }
 
         }
 
 
+    }
+    
+    
+    .footer {
+        
+        margin-bottom: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+        width: 100%;
+        
+        background: rgb(65, 65, 65);
+        //color: rgb(252, 245, 67);
+        
+        font-family: "Avenir", @native-font;
+        font-weight: 400;
+        text-align: center;
+        font-size: 0.75em;
+        
     }
 
 }

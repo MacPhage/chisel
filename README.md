@@ -9,7 +9,7 @@ A web developers best friend that uses [node-webkit](https://github.com/rogerwan
 
 [//]: # (WEB_CONTENT_START)
 
-###Chisel is an unfinished product and is currently in a pre-alpha stage. If you can code, feel free to contribute and speed up its developmen by making a commit or two to the project on Github.
+###Chisel is an unfinished product and is currently in a pre-alpha stage. If you can code, feel free to contribute and speed up its development by making a commit or two to the project on Github.
 
 ####What is Chisel?
 Chisel is a cross-platform desktop app for easy automation of common things that web developers do. Chisel, out of the box, automates tedious, annoying things like compiling, minifying, and concatenating. Rely on your text editor no longer!

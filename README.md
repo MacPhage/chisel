@@ -31,7 +31,7 @@ Chisel is open-source, and will remain open-source. That means that anyone can c
 
 We want to make Chisel the best it can be.
 
-<span class="signature">Austin and Tarun <a href="https://twitter.com/au5ton/lists/chisel/members"><img src="http://i.imgur.com/W0wpi4f.png" width="25" style="margin:15px;"></a></span>
+<span class="signature">The Chisel developers <a href="https://twitter.com/au5ton/lists/chisel/members"><img src="http://i.imgur.com/W0wpi4f.png" width="25" style="margin:15px;"></a></span>
 
 ---
 

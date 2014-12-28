@@ -36,14 +36,32 @@ var readMeText;
 $(document).ready(function() {
     window.scroll(0, 0);
     new WOW().init();
-    setTimeout(function() {
-        $(".fade-in").animate({opacity: 1});
-        $("body").css({"overflow": "scroll"});
-    }, 1500);
-    setTimeout(function() {
-        $(".content-main").fadeIn();
-    }, 2000);
-    $("#logo img").click(function() {
+
+    var siteContent = $("#readmetarget");
+    //Where the desired webcontent starts in the README.md
+    var mdSep = "[//]: # (WEB_CONTENT_START)"; 
+
+    $.ajax({
+        url: "README.md",
+        success: function(result){
+            console.log("Ajax successfully retrieved README.md.");
+            readMeText = result;
+            siteContent.html(marked(readMeText.substring(readMeText.indexOf(mdSep))));
+            $("p").has(".signature").css("text-align", "right");
+            $("#footer").removeClass("invisible");
+        },
+        error: function(jqXHR,textStatus,errorThrown){
+            siteContent.html("Ajax failed to retrieve <a href=\"https://github.com/MacPhage/chisel/blob/master/README.md\">README.md</a>.<br>");
+            $("#footer").removeClass("invisible");
+        }
+    });
+
+    var hue = randomColor({luminosity: "light"});
+    document.getElementById("footer").setAttribute("style","color: "+hue+"!important");
+
+    //$(".invisible").removeClass("invisible");
+
+    $(".icon").click(function() {
         clicks++;
         if (clicks === 7) {
             window.location.href = "http://doge2048.com";

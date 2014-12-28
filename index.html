@@ -29,7 +29,9 @@
                 <div class="hero">
 
                     <div class="wrap">
-                        <div id="logo" class="icon wow animated flipInX"></div>
+                        <div id="logo" class="icon wow animated flipInX">
+                            <img src="res/img/Icon256.png" width="256" height="256" />
+                        </div>
                     </div>
 
                     <div class="wrap">
@@ -93,37 +95,19 @@
         <div id="footer" class="footer invisible">
             Website by Tarun Boddupalli and Austin Jackson &copy;
         </div>
-        
-        
-        <script>
 
-            var siteContent = document.getElementById("readmetarget");
-            //Where the desired webcontent starts in the README.md
-            var mdSep = "[//]: # (WEB_CONTENT_START)"; 
-
-            $.ajax({
-                url: "README.md",
-                success: function(result){
-                    console.log("Ajax successfully retrieved README.md.");
-                    readMeText = result;
-                    siteContent.innerHTML = marked(readMeText.substring(readMeText.indexOf(mdSep)));
-                    $("p").has(".signature").css("text-align", "right");
-                    $("#footer").removeClass("invisible");
-                },
-                error: function(jqXHR,textStatus,errorThrown){
-                    siteContent.innerHTML = "Ajax failed to retrieve <a href=\"https://github.com/MacPhage/chisel/blob/master/README.md\">README.md</a>.<br>";
-                    $("#footer").removeClass("invisible");
-                }
-            });
-
+        <style type="text/css">
             
-            var hue = randomColor({luminosity: "light"});
-            document.getElementById("footer").setAttribute("style","color: "+hue+"!important");
-            
-            //$(".invisible").removeClass("invisible");
-            
-
-        </script>
-
+            .icon img {
+              -webkit-transition: all 150ms;
+                      transition: all 150ms;
+              -webkit-transform: scale(1);
+                      transform: scale(1);
+            }
+            .icon img:active {
+              -webkit-transform: scale(0.9);
+                      transform: scale(0.8);
+            }
+        </style>
     </body>
 </html>

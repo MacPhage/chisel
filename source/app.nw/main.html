@@ -5,7 +5,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <link href="./css/core.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
     <link href="./node_modules/animate.css/animate.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +24,7 @@
     <div class="main-container no-select">
         <div id="releasewarning"></div>
 
-        <div class="hero wow fadeInDown invisible" data-wow-delay="0.25s">
+        <div class="hero wow fadeInDown invisible">
             <div class="title">
                 Chisel
                 <span class="caption"><p>
@@ -48,79 +47,79 @@
             -->
 
 
-        <div data-index="0" class="project wow flipInX invisible red" data-wow-delay="1.0s">
+        <div  class="project wow flipInX invisible red">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="1" class="project wow flipInX invisible orange" data-wow-delay="1.1s">
+        <div  class="project wow flipInX invisible orange">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="2" class="project wow flipInX invisible yellow" data-wow-delay="1.2s">
+        <div  class="project wow flipInX invisible yellow">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="3" class="project wow flipInX invisible green" data-wow-delay="1.3s">
+        <div  class="project wow flipInX invisible green">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="4" class="project wow flipInX invisible blue" data-wow-delay="1.4s">
+        <div  class="project wow flipInX invisible blue">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="5" class="project wow flipInX invisible purple" data-wow-delay="1.5s">
+        <div  class="project wow flipInX invisible purple">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="6" class="project wow flipInX invisible red" data-wow-delay="1.6s">
+        <div  class="project wow flipInX invisible red">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="7" class="project wow flipInX invisible orange" data-wow-delay="1.7s">
+        <div  class="project wow flipInX invisible orange">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="8" class="project wow flipInX invisible yellow" data-wow-delay="1.8s">
+        <div  class="project wow flipInX invisible yellow">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="9" class="project wow flipInX invisible green" data-wow-delay="1.9s">
+        <div  class="project wow flipInX invisible green">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="10" class="project wow flipInX invisible blue" data-wow-delay="2.0s">
+        <div class="project wow flipInX invisible blue">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="11" class="project wow flipInX invisible purple" data-wow-delay="2.1s">
+        <div class="project wow flipInX invisible purple">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
             </p>
         </div>
-        <div data-index="12" class="project wow flipInX invisible red" data-wow-delay="2.2s">
+        <div class="project wow flipInX invisible red">
             <span class="name">My Website</span>
             <p class="file-path">
                 ~/path/to/file.txt
@@ -137,7 +136,7 @@
     </div>
 
 
-    <div class="bottom-panel wow fadeInUp invisible" data-wow-delay="0.50s">
+    <div class="bottom-panel wow fadeInUp invisible">
 
         <div class="container">
             <div class="button">
@@ -157,12 +156,12 @@
 
 $(document).ready(function(){
     $("*").removeClass("invisible");
+    $(".project").each(function (index) {
+        $(this).attr("data-index", index);
+        $(this).attr("data-wow-delay", (1.0 + index/10) + "s");
+    })
     $(".project").attr("onclick","javascript:alert(this.getAttribute('data-index'));");
 });
-
-
-
-
 
 </script>
 

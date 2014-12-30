@@ -175,7 +175,9 @@
           var colorClasses = ["red", "orange", "yellow", "green", "blue", "purple"];
           $(this).addClass(colorClasses[index%6]);
       });
-      $(".project").attr("onclick","javascript:alert(this.getAttribute('data-index'));");
+      $(".project").click(function() {
+        alert($(this).attr("data-index"));
+      });
     });
 
     </script>

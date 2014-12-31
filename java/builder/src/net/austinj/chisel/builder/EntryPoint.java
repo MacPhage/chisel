@@ -28,11 +28,11 @@ public class EntryPoint
             System.exit(0);
         }
 
-        if(operation.equals("BuildArchive"))
+        if(operation.equals("buildarchive"))
         {
             BuildArchive.start(baton);
         }
-        else if(operation.equals("MakeOSXApp"))
+        else if(operation.equals("makeosxapp"))
         {
             //MakeOSXApp.start();
         }

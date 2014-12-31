@@ -45,15 +45,15 @@ public class EntryPoint
 
     public static String[] getOptions(String[] arr) //Removes the first index of the String array
     {
-        String[] options = new String[arr.length-1];
+        /*String[] options = new String[arr.length-1];
 
         for(int i = 1; i < arr.length; i++)
         {
             options[i-1] = arr[i];
         }
 
-        return options;
-
+        return options;*/
+        return Arrays.copyOfRange(arr, 1, arr.length);
     }
 
 }

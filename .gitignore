@@ -2,7 +2,9 @@ build/**
 bin/**
 source/app.nw/node_modules/**
 
-#IntelliJ stuff
+# IntelliJ stuff
 java/builder/out/**
 java/builder/*.iml
 java/builder/.idea/
+
+*.class

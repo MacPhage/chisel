@@ -6,5 +6,6 @@ source/app.nw/node_modules/**
 java/builder/out/**
 java/builder/*.iml
 java/builder/.idea/
+java/builder/src/META-INF/
 
 *.class

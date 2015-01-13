@@ -20,7 +20,7 @@
         "icon": "icon/Icon1024.png",
         "toolbar": false,
         "frame": true,
-        "resizable": false,
+        "resizable": true,
         "width": 375,
         "height": 667,
         "position": "mouse"

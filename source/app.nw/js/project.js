@@ -17,7 +17,7 @@ Project.prototype.htmlRepresentation = function() {
 var ProjectManager = {
   currentProjects: {},
   add: function(project) {
-    if ($.inArray(project.name, Object.getOwnPropertyNames(this.currentProjects)) != -1) {
+    if ($.inArray(project.name, Object.getOwnPropertyNames(this.currentProjects)) == -1) {
       this.currentProjects[project.name] = project;
     } else {
       throw "Project already exists!";

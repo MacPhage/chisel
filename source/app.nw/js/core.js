@@ -27,7 +27,8 @@ var option = {
 var shortcut = new gui.Shortcut(option);
 gui.App.registerGlobalHotKey(shortcut);
 
-
+// Commenting this out until chisel.json is fully implemented.
+/*
 //Generates commandline arguments as a String
 var args = "";
 gui.App.argv.forEach(function(val, index, array) {
@@ -40,9 +41,8 @@ var file;
 try {
     file = fs.readFileSync(String(gui.App.argv[0]),"utf8");
 
-}
-catch(err){
-    alert(err);
+} catch(err) {
+    alert("There was an error: " + err);
 }
 alert(file);
 
@@ -51,3 +51,4 @@ var chisel = JSON.parse(String(file));
 
 alert("Ready to do the thing!");
 //Ready for actioning B-)
+*/

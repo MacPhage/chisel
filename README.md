@@ -1,7 +1,7 @@
 chisel
 ======
 
-A web developers best friend that uses [node-webkit](https://github.com/rogerwang/node-webkit) and NodeJS.
+A web developers best friend that uses [NW.js](http://nwjs.io/) and NodeJS.
 
 [//]: # (Everything after the "WEB_CONTENT_START" below will be               )
 [//]: # (what's actually embedded at http://austinj.net/chisel/               )
@@ -23,7 +23,7 @@ Simply put, it's a easy-to-use tool that *will* save you time.
 - Sleek UI
 - Playful, fun, and easy to use
 - Modular and expandable
-- OS X, Linux, and even Windows support (see [node-webkit](https://github.com/rogerwang/node-webkit) for compatibility details)
+- OS X, Linux, and even Windows support (see [NW.js](http://nwjs.io/) for compatibility details)
 
 
 ####The Plan
